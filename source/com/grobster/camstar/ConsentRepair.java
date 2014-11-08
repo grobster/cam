@@ -8,19 +8,7 @@ public class ConsentRepair implements ConsentRepairInterface { //implementation 
 	public void renameFiles(Path path){
 		renameBehavior.renameFiles(path);
 	}
-	
-	public void setFullDirectoryPath(String path){}
-	
-	public String getFullDirectoryPath() {
-		return null;
-	}
-	public void manuallyAppendFolderName(String manualFolderName){}
-	
-	public void autoAppendFolderName(){}
-	
-	public String getBaseDirectoryPath() {
-		return null;
-	}
+
 	public int getNumberFilesRenamed() {
 		return 0;
 	}
@@ -41,7 +29,6 @@ public class ConsentRepair implements ConsentRepairInterface { //implementation 
 	public String getNewFileName() {
 		return null;
 	}
-	public void setBaseDirectoryPath(String p){}
 	
 	public void setRenameBehavior(RenameBehavior renameBehavior){
 		this.renameBehavior = renameBehavior;
