@@ -1,10 +1,11 @@
 package com.grobster.camstar;
 
+import java.nio.file.Path;
 
 public class ConsentRepair implements ConsentRepairInterface { //implementation class
 	private RenameBehavior renameBehavior;
 	
-	public void renameFiles(){
+	public void renameFiles(Path path){
 		renameBehavior.renameFiles();
 	}
 	
