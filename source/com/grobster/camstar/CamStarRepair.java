@@ -1,5 +1,7 @@
 package com.grobster.camstar;
 
+import java.nio.file.Path;
+
 public class CamStarRepair implements RenameBehavior {
 	private ConsentRepairInterface consentRepair;
 	
@@ -7,7 +9,7 @@ public class CamStarRepair implements RenameBehavior {
 		this.consentRepair = consentRepair;
 	}
 	
-	public void renameFiles() {
+	public void renameFiles(Path path) {
 		
 	}
 }
