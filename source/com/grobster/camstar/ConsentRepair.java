@@ -6,7 +6,7 @@ public class ConsentRepair implements ConsentRepairInterface { //implementation 
 	private RenameBehavior renameBehavior;
 	
 	public void renameFiles(Path path){
-		renameBehavior.renameFiles();
+		renameBehavior.renameFiles(path);
 	}
 	
 	public void setFullDirectoryPath(String path){}
