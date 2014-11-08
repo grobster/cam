@@ -3,7 +3,7 @@ package com.grobster.camstar;
 import java.nio.file.Path;
 
 public interface ConsentRepairInterface {
-	public void renameFiles(Path path);
+	public void renameFiles(Path path, String filter);
 	public void setFileEnding(String fileEnding);
 	public void setRenameBehavior(RenameBehavior renameBehavior); // new just added uses Strategy Pattern
 	public String getOldFileName();
