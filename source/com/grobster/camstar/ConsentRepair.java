@@ -18,11 +18,7 @@ public class ConsentRepair implements ConsentRepairInterface { //implementation 
 	public int getNumberFilesRenamed() {
 		return numberOfFilesRenamed;
 	}
-	public void setFileEnding(String fileEnding){}
-	
-	public String getFileEnding() {
-		return null;
-	}
+
 	public void registerObserver(FileRenamerObserver o){}
 	
 	public void removeObserver(FileRenamerObserver o){}
