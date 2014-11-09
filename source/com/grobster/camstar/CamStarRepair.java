@@ -1,17 +1,16 @@
 package com.grobster.camstar;
 
 import java.nio.file.Path;
-import java.util.List;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import static java.nio.file.StandardCopyOption.*;
 import java.nio.file.Paths;
 
 public class CamStarRepair implements RenameBehavior {
 	public static final String SECOND_PART_PHOTO_CONSENT_NAME = " - Photo Consent";
 
-	public void renameFiles(Path path, String filter) {
+	public int renameFiles(Path path, String filter) {
+		int numberOfFilesRepaired = 0;
 		try(DirectoryStream<Path> stream = Files.newDirectoryStream(path, "*" + filter)){ // filter based on file type
 			for (Path entry: stream) {
 				if (CamStarRepair.countPeriodsInFileName(entry) == 1) {
@@ -25,6 +24,7 @@ public class CamStarRepair implements RenameBehavior {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+		return numberOfFilesRepaired;
 	}
 	
 	public static int countPeriodsInFileName(Path path) {
