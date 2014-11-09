@@ -8,7 +8,7 @@ public class ConsentRepair implements ConsentRepairInterface { //implementation 
 	
 	public void renameFiles(Path path, String filter){
 		if (Files.exists(path) && Files.isDirectory(path)) {
-			renameBehavior.renameFiles(path);
+			renameBehavior.renameFiles(path, filter);
 		}
 	}
 
