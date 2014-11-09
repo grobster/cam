@@ -5,15 +5,18 @@ import java.nio.file.Files;
 
 public class ConsentRepair implements ConsentRepairInterface { //implementation class
 	private RenameBehavior renameBehavior;
+	private int numberOfFilesRenamed;
 	
-	public void renameFiles(Path path, String filter){
+	public int renameFiles(Path path, String filter){
+		numberOfFilesRenamed = 0;
 		if (Files.exists(path) && Files.isDirectory(path)) {
-			renameBehavior.renameFiles(path, filter);
+			return numberOfFilesRenamed = renameBehavior.renameFiles(path, filter);
 		}
+		return 0;
 	}
 
 	public int getNumberFilesRenamed() {
-		return 0;
+		return numberOfFilesRenamed;
 	}
 	public void setFileEnding(String fileEnding){}
 	
