@@ -15,8 +15,8 @@ public class CamStarRepair implements RenameBehavior {
 			for (Path entry: stream) {
 				if (CamStarRepair.countPeriodsInFileName(entry) == 1) {
 					String[] tokens = entry.getFileName().toString().split("_");
-					if (tokens.length > 0) {
-						String firstFileNameRepair = tokens[0].trim();
+					if (tokens.length == 2) {
+						String firstFileNameRepair = tokens[1].trim();
 						String[] userNameTokens = firstFileNameRepair.split("\\s+");
 						if (userNameTokens.length == 2) {
 							Path target = Paths.get(new StringBuilder(path.toString() + "\\" + userNameTokens[1].trim() + "_" + userNameTokens[0].trim() + CamStarRepair.SECOND_PART_PHOTO_CONSENT_NAME + filter).toString());
