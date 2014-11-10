@@ -18,19 +18,6 @@ public class ConsentRepair implements ConsentRepairInterface { //implementation 
 	public int getNumberFilesRenamed() {
 		return numberOfFilesRenamed;
 	}
-
-	public void registerObserver(FileRenamerObserver o){}
-	
-	public void removeObserver(FileRenamerObserver o){}
-	
-	public void notifyObservers(){}
-	
-	public String getOldFileName() {
-		return null;
-	}
-	public String getNewFileName() {
-		return null;
-	}
 	
 	public void setRenameBehavior(RenameBehavior renameBehavior){
 		this.renameBehavior = renameBehavior;
