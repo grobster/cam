@@ -17,8 +17,7 @@ public class ConsentRepairAllFileTypes implements ConsentRepairInterface { // cl
 		fileCount = fileCount + consentRepair.renameFiles(path, filter);
 		
 		for (int i = 0; i < ConsentRepairAllFileTypes.FILE_TYPES.length; i++) {
-			filter = FILE_TYPES[i];
-			fileCount = fileCount + consentRepair.renameFiles(path, filter);
+			fileCount = fileCount + consentRepair.renameFiles(path, FILE_TYPES[i]);
 		}
 		return fileCount;
 	}
